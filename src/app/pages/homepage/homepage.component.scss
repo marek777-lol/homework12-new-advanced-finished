@@ -1,0 +1,118 @@
+* {
+  font-family: monospace;
+}
+
+.lightblue {
+  color: #b5d8f7;
+}
+.section1 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 650px;
+  width: 100%;
+  background-image: url('https://monosushi.com.ua/wp-content/uploads/2020/10/banner-img-1-1920x650.jpg');
+  position: relative;
+
+
+  .info {
+    top: 190px;
+    position: relative;
+    margin: auto;
+    width: 60%;
+
+    .section1-text {
+      margin: 0;
+      color: white;
+      font-weight: 700;
+      font-size: 35px;
+
+    }
+
+    .section1-text2 {
+      color: white;
+      opacity: 0.75;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+
+    .more-info-btn {
+        border: 1px solid #b5d8f7;
+        background-color: #b5d8f7;
+        border: none;
+        border-radius: 10px;
+        height: 56px;
+        width: 166px;
+        font-weight: 700;
+        font-size: 17px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .more-info-btn:hover {
+        border: 1px solid #b5d8f7;
+        background-color: black;
+        color: white;
+    }
+    
+  }
+}
+
+.section2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: #b5d8f7;
+    // background-image: ;
+
+    .container {
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+        justify-content: space-between;
+
+      .first{
+        width: 23%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      
+
+        .btn {
+          width: 177px;
+          height: 54px;
+          border: none;
+          background-color: white;
+          font-weight: 700;
+          font-size: 18px;
+          border-radius: 10px;
+          transition: 0.5s;
+          border: 0px solid white;
+        }
+
+        .btn:hover {
+          background-color: #b5d8f7;
+          border: 1px solid white;
+        }
+      }
+
+      .second {
+        @extend .first;
+        .text-second {
+          text-align: center;
+          font-weight: 700;
+          margin-left: 20px;
+        }
+      }
+
+      .third {
+        @extend .first;
+        .text-third {
+          margin-left: 20px;
+          font-weight: 700;
+        }
+      }
+    }
+}

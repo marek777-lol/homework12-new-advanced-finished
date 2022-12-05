@@ -1,0 +1,39 @@
+<div style="height: 60px; width: 70%; margin-bottom: 50px;  margin: 50px auto; display: flex;">
+  <div style="width: 20%; border: 1px solid #000; display: flex; justify-content: center; align-items: center;">всі
+  </div>
+  <div style="width: 20%; border: 1px solid #000; display: flex; justify-content: center; align-items: center;">
+    філадельвія</div>
+  <div style="width: 20%; border: 1px solid #000; display: flex; justify-content: center; align-items: center;">
+    Каліфорнія</div>
+  <div style="width: 20%; border: 1px solid #000; display: flex; justify-content: center; align-items: center;">Запечені
+  </div>
+  <div style="width: 20%; border: 1px solid #000; display: flex; justify-content: center; align-items: center;">Фірмові
+  </div>
+  <div style="width: 20%; border: 1px solid #000; display: flex; justify-content: center; align-items: center;">Макі
+  </div>
+  <div style="width: 20%; border: 1px solid #000; display: flex; justify-content: center; align-items: center;">Преміум
+  </div>
+</div>
+<div style="display: flex; margin-top: 50px;">
+
+  <div class="card"
+    style="width: 18rem; padding: 3px; margin-right: 50px; border: 2px solid #b5d8f7; width: 300px; text-align: center; border-radius: 5px;"
+    *ngFor="let product of productArray">
+    <a [routerLink]="[ '/product-category/'+product.path, product.id]">
+      <img style="height: 300px; width: 300px;" [src]="product.image" class="card-img-top">
+    </a>
+    <div class="card-body">
+      <h5 [routerLink]="[ '/product-category/'+product.path, product.id]" class="card-title">{{product.name}}</h5>
+      <p class="card-text">{{product.price * product.orderedProduct}} uah</p>
+      <input class="button" type="button" value="Order" (click)="addToBasket(product)">
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+      <input type="button" value="-" class="order-btn1" (click)="btn1(product, false)">
+      <div class="amount" style="width: 50px; border: 1px solid black;" >
+        <p class="number" style="height: 5px; display: flex; justify-content: center; align-items: center;">{{product.orderedProduct}}</p>
+    </div> 
+      <!-- <input type="text" class="price" style="width: 80px; margin-top: 20px;"> -->
+      <input type="button" value="+" class="order-btn2" (click)="btn1(product, true)">
+    </div>
+  </div>
+</div>

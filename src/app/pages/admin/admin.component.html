@@ -1,0 +1,28 @@
+<main>
+    <div class="discount-container">
+        <a class="link-discount" [routerLink]="[ '/admin/discount']"  routerLinkActive="active">
+            <p>discount</p>
+        </a>
+    </div>
+
+    <div class="category-container">
+        <a class="link-category" [routerLink]="[ '/admin/category']" routerLinkActive="active">
+            <p>category</p>
+        </a>
+    </div>
+
+    <div class="category-container">
+            <a class="link-category" [routerLink]="[ '/admin/product']" routerLinkActive="active">
+                <p>Products</p>
+            </a>
+    </div>
+
+    <div class="category-container">
+        <a class="link-category" [routerLink]="[ '/admin/order']" routerLinkActive="active">
+            <p>Order</p>
+
+        </a>
+    </div>
+
+    <button class="nav-link" (click)="logout()" type="button" style="width: 201px; height: 50px; background-color: transparent; border: 1px solid lightgray; border-left: none;">Log Out</button>
+</main>

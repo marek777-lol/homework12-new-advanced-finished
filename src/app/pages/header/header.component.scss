@@ -1,0 +1,132 @@
+header {
+    display: flex;
+    font-family: monospace;
+    height: 95px;
+    
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .logo {
+        background-color: #b5d8f7;
+        width: 200px;
+        height: 95px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav {
+        display: flex;
+        padding-left: 30px;
+
+        .nav-item {
+            padding-top: 15px;
+            width: 116px;
+            text-align: center;
+
+            .show-menu {
+                top: -20px;
+                left: -20px;
+                position: relative;
+                z-index: 999;
+                height: 200px;
+                width: 150px;
+                background-color: white;
+                border: 1px solid #000;
+                text-align: left;
+                padding-left: 16px;
+            }
+        }
+
+        .menu-icon {
+            margin-top: 8px;
+            font-size: 25px;
+            margin-right: 50px;
+            width: 116px;
+            cursor: pointer;
+        }
+    }
+
+    .btn-call {
+        margin-top: 21px;
+        background-color: #b5d8f7;
+        height: 35px;
+        width: 201px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+        border: 1px solid #b5d8f7;
+        transition: 0.3s;
+        cursor: pointer;
+
+        .phone-img {
+            margin-right: 12px;
+        }
+    }
+
+    .btn-call:hover {
+        background-color: white;
+    }
+
+    .phone-number {
+        margin-left: 100px;
+        margin-top: 18px;
+        width: 150px;
+    }
+
+    .log-in {
+        margin-top: 24px;
+        margin-left: 100px;
+        width: 116px;
+    }
+
+    .cart {
+        margin-left: 100px;
+        height: 95px;
+        width: 180px;
+        background-color: #b5d8f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ballance {
+            font-weight: 700;
+            font-size: 18px;
+            margin-left: 5px;
+        }
+    }
+}
+
+.delete-btn {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #b5d8f7;
+
+    .text-delete-btn {
+        color: white;
+    }
+}
+
+.order-btn2 {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cart-hidden {
+    scrollbar-width: none;
+}
+
+.login-btn {
+    margin-top: 45px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

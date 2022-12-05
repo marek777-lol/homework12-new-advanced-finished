@@ -1,0 +1,36 @@
+main {
+  font-family: monospace;
+
+    .active {
+        font-weight: 700;
+        width: 200px;
+        border-top: 2px solid #b5d8f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+  .discount-container {
+    width: 200px;
+    height: 50px;
+    border: 1px solid lightgray;
+    border-left: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .link-discount {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+    }
+  }
+
+  .category-container {
+    @extend .discount-container;
+
+    .link-category {
+      @extend .link-discount;
+    }
+  }
+}

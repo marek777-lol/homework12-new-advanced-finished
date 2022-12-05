@@ -1,0 +1,21 @@
+<header class="header-discount-info">
+    <a [routerLink]="[ '/']" style="margin-right: 20px; color: black; text-decoration: none;">main page</a>
+    <a [routerLink]="[ '/discounts']" style="color: black; text-decoration: none;">discount</a>
+    <!-- <a [routerLink]="[ '/path', routeParam ]">name</a> -->
+</header>
+<div style=" margin: 0 auto; padding: 10px; margin-top: 50px; border: 2px solid #b5d8f7; width: 1000px;">
+
+    <div style="display: flex; width: 700px; justify-content: center;">
+        <div>
+            <div></div>
+            <img style="height: 300px; width: 300px; margin-top: 23px; margin-right: 20px;" [src]="currentProduct.image">
+        </div>
+        <div>
+            <div class="card-body">
+                <h5 class="card-title">{{currentProduct.name}}</h5>
+                <p class="card-text">{{currentProduct.tittle}}</p>
+                <p class="card-text">{{currentProduct.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<main>
+  <app-admin></app-admin>
+  <div class="showMenu">
+    <button class="btn1" (click)="showMenu()">{{'додати продукти'}}</button>
+    <div class="create-menu" [style.display]="showMenuProduct ? 'block' : 'none'">
+      <div class="first-layer">
+        <select class="category">
+          <option selected *ngFor="let category of categories">{{category.name}}</option>
+        </select>
+      </div>
+      <div class="second-layer">
+        <input class="name" type="text" placeholder="*name">
+        <input class="path" type="text" placeholder="*path">
+      </div>
+      <div>
+        <input class="ingredients" type="text" placeholder="*ingredients">
+      </div>
+      <div>
+        <input class="weight" type="text" placeholder="*weight">
+        <input class="price" type="text" placeholder="*price">
+      </div>
+
+      <div *ngIf="showImage">
+        <img style="height: 200px; margin-right: 50px; margin-top: 10px; margin-bottom: 10px;" [src]="img" alt="">
+      </div>
+      <div>
+        <progress style="height: 20px; margin-right: 50px;" id="file" max="100" *ngIf="showProgress"
+          [value]="uploadPrecent"></progress>
+      </div>
+      <div class="third-layer">
+        <input style="margin-top: 20px;" class="uploadFile" type="file" (change)="onFileSelecte($event)">
+        <button (click)="deleteImage()">delete image</button>
+      </div>
+      <div *ngIf="!showSave" class="fourth-layer"><button class="btn-add" (click)="addProduct()">Add</button>
+      </div>
+      <div *ngIf="showSave" class="fourth-layer"><button class="btn-add" (click)="saveProduct()">Save</button>
+      </div>
+    </div>
+
+    <table class="table" [style.display]="showMenuProduct ? 'none' : 'block'">
+      <tr class="tr1">
+        <th>Дата</th>
+        <th>Назва</th>
+        <th>Шлях</th>
+        <th>Вага</th>
+        <th>Ціна</th>
+        <th>інгредієнти</th>
+        <th>Картинка</th>
+        <th>Дії</th>
+      </tr>
+
+      <tr *ngFor="let product of products; index as i">
+        <td>{{ product.date }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.path }}</td>
+        <td>{{ product.weight }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.ingredients }}</td>
+        <td>
+          <img style="height: 40px;" [src]="product.image" alt="">
+        </td>
+        <td style="flex-direction: column; line-height: 0px;">
+          <p (click)="edit(product)" style="color: #b5d8f7; height: 2px; cursor: pointer;">edit</p>
+          <p (click)="delete(product)" style="color: #b5d8f7; height: 2px; cursor: pointer;">delete</p>
+
+        </td>
+      </tr>
+    </table>
+  </div>
+</main>

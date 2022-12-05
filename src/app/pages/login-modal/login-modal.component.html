@@ -1,0 +1,45 @@
+<div class="modal-container">
+    <form class="form" [formGroup]="authForm">
+        <div class="lastName-name-container"> 
+            <mat-form-field class="name" appearance="fill"*ngIf="showSignUp">
+                <mat-label>Your name</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field class="lastName" appearance="fill"*ngIf="showSignUp">
+                <mat-label>Last Name</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+        <div class="phoneNumber">
+            <mat-form-field class="phoneNumber-input" appearance="fill" *ngIf="showSignUp">
+                <mat-label>Phone Number</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+        <div class="email-input">
+            <mat-form-field class="email" appearance="fill">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com" formControlName="email" [formControl]="email" required>
+            </mat-form-field>
+        </div>
+        <div class="password-input">
+            <mat-form-field class="password" appearance="fill">
+                <mat-label>Enter your password</mat-label>
+                <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                </button>
+            </mat-form-field>
+        </div>
+    </form>
+    <div>
+        <div class="pointer" (click)="showSignUpFunction()" *ngIf="showSignUp">
+            <p>Already have an account? Log in!</p>
+        </div>
+        <div class="pointer" (click)="showSignUpFunction()" *ngIf="!showSignUp">
+            <p>Don't have an account ? Sign up !</p>
+        </div>
+    </div>
+    <button *ngIf="!showSignUp" class="login-btn" mat-button (click)="loginUser()">Log in</button>
+    <button *ngIf="showSignUp" class="login-btn" mat-button (click)="signUpUser()">Sign up</button>
+</div>

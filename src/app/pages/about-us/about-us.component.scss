@@ -1,0 +1,157 @@
+.main-container {
+  font-family: monospace;
+
+  .container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 16px;
+
+    .section2 {
+        margin-top: 50px;
+        .left-right {
+            width: 1206px;
+            display: flex;
+            justify-content: space-between;
+            .left {
+                img {
+                    height: 553px;
+                    width: 553px;
+                    border-radius: 5px;
+                }
+            }
+
+            .right {
+                height: 553px;
+                width: 553px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            } 
+        }
+    }
+
+    .section3 {
+        margin-top: 50px;
+        .left-right {
+            width: 1206px;
+            display: flex;
+            justify-content: space-between;
+            .left {
+                height: 553px;
+                width: 553px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;               
+            }
+
+            .right {
+                img {
+                    height: 553px;
+                    width: 553px;
+                    border-radius: 5px;
+                }
+            } 
+        }
+    }
+
+    .section4 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+
+        .advantages-container {
+            margin-top: 50px;
+            width: 1300px;
+            display: flex;
+
+            .first {
+                width: 355px;
+                height: 250px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+
+                .icon {
+                    height: 85px;
+                    width: 85px;
+                    background-color: #b5d8f7;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 15px;
+                }
+            }
+
+            .second {
+                width: 355px;
+                height: 250px;
+                border-left: 1px solid lightgray;
+                border-right: 1px solid lightgray;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                .icon {
+                    height: 85px;
+                    width: 85px;
+                    background-color: #b5d8f7;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 15px;
+                }
+            }
+
+            .third {
+                width: 355px;
+                height: 250px;
+                border-right: 1px solid lightgray;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                .icon {
+                    height: 85px;
+                    width: 85px;
+                    background-color: #b5d8f7;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 15px;
+                }
+            }
+
+            .fourth {
+                width: 355px;
+                height: 250px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                .icon {
+                    height: 85px;
+                    width: 85px;
+                    background-color: #b5d8f7;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+
+    .tittle {
+      font-size: 35px;
+      border: none;
+      border-top: 3px solid #b5d8f7;
+      font-weight: 600;
+      width: 140px;
+    }
+  }
+
+}

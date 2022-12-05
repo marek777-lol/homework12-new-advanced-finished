@@ -1,0 +1,28 @@
+* {
+    font-family: monospace;
+}
+
+.container {
+    text-align: center;
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    .discount-text {
+        font-size: 50px;
+        border-top: 3px solid #b5d8f7;
+        width: 450px;
+        text-align: center;
+    }
+
+    .discount {
+        width: 400px;
+        margin-right: 70px;
+        .tittle {
+            font-size: 20px;
+        }
+    }
+}

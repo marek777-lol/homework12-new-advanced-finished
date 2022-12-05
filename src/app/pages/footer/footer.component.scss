@@ -1,0 +1,103 @@
+footer {
+    margin-top: 51px;
+    border-top: 3px solid #b5d8f7;
+    width: 100%;
+    height: 200px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    font-family: monospace;
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+
+        .logo-container-footer {
+            width: 20%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            
+
+            .follow-icons {
+                display: flex;
+                align-items: center;
+
+                .facebook-icon {
+                    height: 40px;
+                    width: 40px;
+                    background-color: #b5d8f7;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 10px;
+                    border: 1px solid #b5d8f7;
+                    transition: 0.5s;
+                }
+
+                .facebook-icon:hover {
+                    background-color: white;
+                }
+
+                .instagram-icon {
+                    @extend .facebook-icon;
+                }
+            }
+
+            .making-webpages-container {
+                display: flex;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+
+            .making-webpages-container:hover {
+               color: #b5d8f7;
+            }
+
+            .card-container {
+                margin-left: 50px;
+                margin-top: 21px;
+                display: flex;
+                .card {
+                    height: 35px;
+                    width: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 7px;
+                    border: 1px solid lightgray;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .logo-container-footer {
+            display: flex;
+        }
+
+        .about-us-text {
+            margin-left: 30px;
+            margin-right: 45px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .about-us-text:hover {
+            color: #b5d8f7
+        }
+
+
+        .discount-text {
+            @extend .about-us-text;
+        }
+
+        .oferta-text {
+            @extend .about-us-text;
+        }
+    }
+}

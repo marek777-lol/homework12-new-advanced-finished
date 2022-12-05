@@ -1,0 +1,55 @@
+<main>
+    <app-admin></app-admin>
+
+    <div>
+        <button type="button" class="btn1" (click)="showCreateDiscount()">{{'додати акцію' | uppercase}}</button>
+        <div class="create-menu" [style.display]="showMenuDiscount ? 'block' : 'none'">  
+            <div class="first-layer">
+                <input class="name" type="text" placeholder="*name">
+                <input class="tittle" type="text" placeholder="*tittle">
+            </div>
+            <div class="second-layer">
+                <input class="description" type="text" placeholder="*description">
+            </div>
+            <div *ngIf="showImage">
+                <img style="height: 200px; margin-right: 50px; margin-top: 10px; margin-bottom: 10px;" [src]="img" alt="">
+            </div>
+            <div>
+                <progress style="height: 20px; margin-right: 50px;" id="file" max="100" *ngIf="showProgress" [value]="uploadPrecent"></progress>
+            </div>
+            <div class="third-layer" style="margin-top: 20px;">
+                <input class="uploadFile" type="file" (change)="onFileSelecte($event)">
+                <button (click)="deleteImage()">delete image</button>
+            </div>
+            <div class="fourth-layer"><button class="btn-add" *ngIf="!showSave" (click)="addDiscount()">Add</button></div>
+            <div class="fourth-layer"><button class="btn-add" *ngIf="showSave" (click)="saveDiscount()">Save</button></div>
+        </div>
+        <table class="table" [style.display]="showMenuDiscount ? 'none' : 'block'">
+            <tr class="tr1">
+                <th>Дата</th>
+                <th>Назва</th>
+                <th>Заголовок</th>
+                <th>Опис</th>
+                <th>Картинка</th>
+                <th>Дії</th>
+            </tr>
+
+            <tr class="tr2" *ngFor="let discount of discountArray; index as i">
+                <td>{{ discount.date }}</td>
+                <td>{{ discount.name }}</td>
+                <td>{{ discount.tittle }}</td>
+                <td>{{ discount.description | slice:0:50}}
+                    <span *ngIf="discount.description.length > 50">...</span>
+                </td>
+                <td>
+                    <img style="height: 40px;" [src]="discount.image" alt="">
+                </td>
+                <td style="flex-direction: column; line-height: 0px;">
+                    <p (click)="edit(discount)" style="color: #b5d8f7; height: 2px; cursor: pointer;">edit</p>
+                    <p (click)="delete(discount)" style="color: #b5d8f7; height: 2px; cursor: pointer;">delete</p>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+</main>

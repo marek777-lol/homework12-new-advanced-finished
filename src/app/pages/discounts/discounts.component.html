@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="discount" *ngFor="let discount of discountArray">
+        <a [routerLink]="[ '/discounts/'+discount.tittle, discount.id]">
+            <p><img class="image" height="300px" width="400px" [src]="discount.image" alt=""></p>
+        </a>
+        <p class="tittle">{{discount.tittle}}</p>
+        <p>{{discount.name}}</p>
+        <p>{{discount.description}}</p>
+    </div>
+</div>

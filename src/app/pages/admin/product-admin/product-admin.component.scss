@@ -1,0 +1,142 @@
+main {
+    display: flex;
+    margin-top: 50px;
+    font-family: monospace;
+
+    .btn1 {
+        margin-bottom: 40px;
+        height: 50px;
+        background-color: white;
+        border: 2px solid #b5d8f7;
+        width: 200px;
+        border-radius: 15px;
+        margin-left: 50px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+    }
+    
+
+    .btn1:hover {
+        background-color: #b5d8f7;
+    }
+
+    .create-menu {
+        margin-left: 50px;
+
+        .category {
+            margin-right: 10px;
+            width: 467px;
+            height: 40px;
+            border-radius: 7px;
+            border: none;
+            border: 1px solid lightgray;
+            padding-left: 25px;
+        }
+
+
+        .name {
+            margin-top: 20px;
+            margin-right: 10px;
+            width: 200px;
+            height: 40px;
+            border-radius: 7px;
+            border: none;
+            border: 1px solid lightgray;
+            padding-left: 25px
+        }
+
+        .path {
+            @extend .name;
+        }
+
+        .ingredients {
+            margin-top: 20px;
+            @extend .category;
+            width: 438px;
+        }
+
+        .weight {
+            @extend .name;
+        }
+
+        .price {
+            @extend .name;
+        }
+
+        .description {
+            margin-top: 20px;
+            width: 438px;
+            height: 200px;
+            border-radius: 7px;
+            border: none;
+            border: 1px solid lightgray;
+            padding-left: 25px
+        }
+
+        .btn-add {
+            margin-top: 20px;
+            height: 50px;
+            background-color: white;
+            border: 2px solid #b5d8f7;
+            width: 200px;
+            border-radius: 15px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+
+        .btn-add:hover {
+            background-color: #b5d8f7;
+        }
+    }
+
+    tr {
+        display: flex;
+    }
+
+    .tr1 {
+        border-bottom: 2px solid #b5d8f7;
+    }
+
+    .table {
+        padding-left: 50px;
+    }
+
+    th {
+        height: 20px;
+        width: 150px;
+    }
+
+    td {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45px;
+        width: 150px;
+        border-bottom: 2px solid lightgray;
+    }
+
+
+    .btn-add {
+        margin-top: 20px;
+        height: 50px;
+        background-color: white;
+        border: 2px solid #b5d8f7;
+        width: 200px;
+        border-radius: 15px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+    .btn-add:hover {
+        background-color: #b5d8f7;
+    }
+}

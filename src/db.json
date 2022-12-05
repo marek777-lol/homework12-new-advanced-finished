@@ -1,0 +1,91 @@
+ {
+  "categories": [
+    {
+      "date": "8/3",
+      "name": "pizza",
+      "tittle": "pizza",
+      "description": "pizza",
+      "image": "https://firebasestorage.googleapis.com/v0/b/monosushi-ua.appspot.com/o/images%2FScreenshot%20(1).png?alt=media&token=5461170d-fec4-4de3-a91c-aecc8566718e",
+      "id": 1
+    },
+    {
+      "date": "8/3",
+      "name": "idk",
+      "tittle": "AYOOO",
+      "description": "bja'jfaksdjfa'ksdfjakdslfidk",
+      "image": "https://firebasestorage.googleapis.com/v0/b/monosushi-ua.appspot.com/o/images%2FScreenshot%20(5).png?alt=media&token=20f75266-e2d7-4f95-ae23-0f0ce9658ff3",
+      "id": 2
+    },
+    {
+      "date": "8/5",
+      "name": "chickenballs",
+      "tittle": "chickenballs",
+      "description": "chickenballs",
+      "image": "https://firebasestorage.googleapis.com/v0/b/monosushi-ua.appspot.com/o/images%2FScreenshot%20(5).png?alt=media&token=bd51f4d9-94d9-4c1c-b011-9c49d1b1ee79",
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "date": "8/3",
+      "name": "pizzaidk",
+      "path": "pizzaidk",
+      "weight": "209",
+      "price": "3",
+      "ingredients": "tomato potato",
+      "image": "https://firebasestorage.googleapis.com/v0/b/monosushi-ua.appspot.com/o/images%2Fsushinigga.jpg?alt=media&token=8ab98e3b-ce5f-4900-aafe-bbba4d1ae898",
+      "orderedProduct": 0,
+      "id": 1
+    },
+    {
+      "date": "8/5",
+      "name": "asdf",
+      "path": "asdf",
+      "weight": "233",
+      "price": "25",
+      "ingredients": "asdf",
+      "image": "https://firebasestorage.googleapis.com/v0/b/monosushi-ua.appspot.com/o/images%2FScreenshot%20(2).png?alt=media&token=941711ce-df9e-4cf4-babd-3d0cfaac0c89",
+      "orderedProduct": 0,
+      "id": 2
+    },
+    {
+      "date": "8/5",
+      "name": "asdfasdfas",
+      "path": "asdfasdfasdfa",
+      "weight": "234",
+      "price": "18",
+      "ingredients": "asdf",
+      "image": "https://firebasestorage.googleapis.com/v0/b/monosushi-ua.appspot.com/o/images%2FScreenshot%20(1).png?alt=media&token=dc47801e-dd28-476e-95aa-a98eea6e3636",
+      "orderedProduct": 0,
+      "id": 3
+    }
+  ],
+  "discounts": [
+    {
+      "date": "8/3",
+      "name": "discount",
+      "tittle": "discount from god",
+      "description": "this is the best discounts UP TO 50%",
+      "image": "https://firebasestorage.googleapis.com/v0/b/monosushi-ua.appspot.com/o/images%2FScreenshot%20(1).png?alt=media&token=ee143d8c-868a-4b3e-abd3-11e9ae6a2c52",
+      "id": 1
+    }
+  ],
+
+  "auth": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "qwerty123",
+      "fullName": "Petro Petriv",
+      "role": "ADMIN"
+    },
+
+    {
+      "id": 2,
+      "email": "user@gmail.com",
+      "password": "qwerty123",
+      "fullName": "Pavlo Pavliv",
+      "role": "USER"
+    }
+  ]
+}

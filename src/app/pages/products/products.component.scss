@@ -1,0 +1,34 @@
+* {
+    font-family: monospace;
+}
+
+.container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .product-text {
+        font-size: 50px;
+        border-top: 3px solid #b5d8f7;
+        width: 450px;
+        text-align: center;
+    }
+}
+
+.card {
+    .button {
+        background-color: white;
+        border: none;
+        border: 1px solid #b5d8f7;
+        height: 30px;
+        width: 100px;
+        border-radius: 5px;
+        transition: 0.7s;
+    }
+
+    .button:hover {
+        background-color: #b5d8f7;
+    }
+}

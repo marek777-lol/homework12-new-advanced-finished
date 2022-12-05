@@ -1,0 +1,96 @@
+.main-container {
+    width: 700px;
+    height: 200px;
+    margin: 150px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left-container {
+        display: flex;
+        flex-direction: column;
+
+        .btn1 {
+            height: 60px;
+            width: 120px;
+            background-color: white;
+            border: none;
+            border-top: 3px solid #b5d8f7;
+        }
+
+        .btn2 {
+            height: 60px;
+            width: 120px;
+            background-color: white;
+            border: none;
+            border-right: 1px solid lightgray;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+        }
+    }
+
+    .right-container {
+        .name-input {
+            height: 35px;
+            width: 200px;
+            border-radius: 5px;
+            border: none;
+            border: 1px solid lightgray;
+            margin-right: 10px;
+            
+            padding-left: 10px;
+        }
+
+        .last-name-input {
+            @extend .name-input;
+        }
+
+        .phone-number-input {
+            width: 422px;
+            height: 35px;
+            border-radius: 5px;
+            border: none;
+            border: 1px solid lightgray;
+            margin-top: 10px;
+            padding-left: 10px;
+        }
+
+        .email-input {
+            @extend .phone-number-input;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+            width: 435px;
+            display: flex;
+            justify-content: space-between;
+
+            .btn1 {
+                height: 40px;
+                width: 150px;
+                background-color: transparent;
+                border: 1px solid #b5d8f7;
+                border-radius: 5px;
+                transition: 0.3s;
+            }
+
+            .btn1:hover {
+                background-color: #b5d8f7;
+            }
+
+            .btn2 {
+                height: 40px;
+                width: 150px;
+                background-color: #b5d8f7;
+                border: none;
+                border-radius: 5px;
+                transition: 0.3s; 
+            }
+
+            .btn2:hover {
+                background-color: transparent;
+                border: 1px solid #b5d8f7;
+            }
+        }
+    }
+}

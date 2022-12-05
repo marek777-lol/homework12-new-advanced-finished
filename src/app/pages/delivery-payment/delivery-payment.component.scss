@@ -1,0 +1,134 @@
+.green {
+  color: #27ae60;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.yellow {
+  color: #f2c94c;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.main-container {
+  width: 100%;
+  font-family: monospace;
+
+  .container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .tittle {
+      font-size: 50px;
+      border-top: 4px solid #b5d8f7;
+    }
+
+    .top-part {
+      display: flex;
+
+      .left {
+        display: flex;
+        box-sizing: border-box;
+        margin-right: 84px;
+
+        .title-text-left-side {
+          font-size: 23px;
+          margin-bottom: 10px;
+          color: #27ae60;
+        }
+
+        .text1 {
+          margin-top: -10px;
+        }
+
+        .text2 {
+          @extend .text1;
+        }
+      }
+
+      .right {
+        display: flex;
+        box-sizing: border-box;
+
+        .title-text-right-side {
+          font-size: 23px;
+          margin-bottom: 10px;
+          color: #f2c94c;
+        }
+
+        .text1 {
+          margin-top: -10px;
+        }
+
+        .text2 {
+          @extend .text1;
+        }
+
+      }
+    }
+
+    .section2 {
+      .map {
+        margin-top: 40px;
+      }
+    }
+
+    .secion3 {
+      font-size: 14px;
+    }
+
+    .section4 {
+      .title-section4 {
+        text-align: center;
+        font-size: 35px;
+        font-weight: 700;
+      }
+
+      .payment {
+        display: flex;
+        justify-content: center;
+        width: 1000px;
+
+        .left {
+          width: 500px;
+          display: flex;
+          justify-content: center;
+          margin-left: 30px;
+
+          .text1-left {
+            font-weight: 700;
+            font-size: 17px;
+          }
+
+          .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            width: 65px;
+            border-radius: 15px;
+            background-color: #b5d8f7;
+            margin-right: 20px;
+          }
+        }
+
+        .right {
+          @extend .left;
+          margin-left: 0;
+          border: none;
+          justify-content: right;
+          width: 500px;
+
+          .text1-right {
+            font-weight: 700;
+            font-size: 17px;
+          }
+        }
+      }
+
+    }
+  }
+}

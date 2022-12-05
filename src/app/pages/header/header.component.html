@@ -1,0 +1,117 @@
+<header>
+    <div class="logo">
+        <a [routerLink]="[ '']"><img style="height: 55px;"
+                src="https://monosushi.com.ua/wp-content/uploads/2021/06/logo.svg" alt=""></a>
+    </div>
+    <div class="nav">
+        <div class="nav-item">
+            <a [routerLink]="[ '/discounts']"><img
+                    src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-gift.svg" alt=""></a>
+            <p>Акції</p>
+        </div>
+        <div class="nav-item">
+            <img [routerLink]="[ 'product-category/rols']"
+                src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-rolls.svg" alt="">
+            <p>Роли</p>
+        </div>
+        <div class="nav-item">
+            <img [routerLink]="[ 'product-category/sets']"
+                src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-sets.svg" alt="">
+            <p>Сети</p>
+        </div>
+        <div class="nav-item">
+            <img [routerLink]="[ 'product-category/drinks']"
+                src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-drinks.svg" alt="">
+            <p>Напої</p>
+        </div>
+        <div class="nav-item">
+            <a [routerLink]="[ 'product-category/sauces']"> <img
+                    src="https://monosushi.com.ua/wp-content/uploads/2021/09/icon.svg" alt=""></a>
+            <p>Соуси</p>
+        </div>
+
+
+        <div class="nav-item" *ngIf="!isLogin" style="padding-top: 60px;">
+            <a (click)="openDialog()" class="nav-link" aria-current="page">Login</a>
+        </div>
+        <div class="nav-item" *ngIf="isLogin" style="padding-top: 60px;">
+            <a [routerLink]="[ '/'+loginUrl ]" routerLinkActive="route-active" class="nav-link" aria-current="page">{{ loginPage }}</a>
+        </div>
+
+        <!-- <div class="nav-item">
+            <p class="login-btn"  mat-button (click)="openDialog()">login</p>
+        </div>
+        <div class="nav-item" *ngIf="isLogin">
+            <a [routerLink]="[ '/'+loginUrl ]" routerLinkActive="route-active" class="nav-link" aria-current="page">{{ loginPage }}</a>
+        </div> -->
+
+        <div class="nav-item">
+            <div class="menu">
+                <p class="menu-icon" (click)="showMenu()">☰</p>
+            </div>
+            <div class="show-menu" *ngIf="menu">
+                <a (click)="hideMenu()" [routerLink]="[ '/delivery-payment']">
+                    <p><b> Доставка та оплата </b></p>
+                </a>
+                <a (click)="hideMenu()" [routerLink]="[ '/about-us']">
+                    <p><b> Про нас </b></p>
+                </a>
+                <a (click)="hideMenu()" [routerLink]="[ '/discounts']">
+                    <p><b>Акції</b></p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="btn-call">
+        <img class="phone-img" src="https://monosushi.com.ua/wp-content/uploads/2020/10/phone.svg" alt="">
+        <span>МИ ЗАТЕЛЕФОНУЄМО</span>
+    </div>
+    <div class="phone-number">
+        <p style="font-weight: 700;">(097) 878 08 37</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; position:relative;">
+        <div class="cart" (click)="showCart()">
+            <div style="position: relative; height: 38px; width: 38px;">
+                <div style="position: absolute; right: -2px; top: 3px; height: 20px; width: 20px; border-radius: 50%; background-color: white; display: flex; justify-content: center;
+                    align-items: center;" *ngIf="showCircle">
+                    {{basket.length}}</div>
+                <img src="https://monosushi.com.ua/wp-content/themes/monosushi/img/basket.svg" alt="">
+            </div>
+
+            <span class="ballance">{{total}}грн</span>
+        </div>
+        <div class="cart-hidden" *ngIf="show"
+            style="height: 196px; width: 700px; background-color: #b5d8f7; position:absolute; top: 95px; right: 2px; z-index: 2; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; overflow-y: scroll; scrollbar-width: none; overflow-x: hidden;">
+            <div class="all-products"
+                style="height: 100px; width: 700px; border: 1px solid #D3D3D3; background-color: white; display: flex; align-items: center;"
+                *ngFor="let product of basket">
+                <img [src]="product.image" alt="" style="height: 80px; width: 200px; margin-left: 20px;">
+                <p style="margin-left: 35px;">{{product.name}}</p>
+
+                <div
+                    style="height: 40px; width: 80px; border-radius: 15px; border: 1px solid #D3D3D3; margin-left: 35px; display: flex; align-items: center; justify-content: center;">
+                    <p>-</p>
+                    <p style="margin-left: 15px; margin-right: 15px;">{{product.orderedProduct}}</p>
+                    <p>+</p>
+                </div>
+                <p style="margin-left: 35px;"><span style="font-weight: bold;">{{product.price *
+                        product.orderedProduct}}</span> грн</p>
+                <div class="delete-btn"
+                    style="height: 40px; width: 120px; border-radius: 15px; border: 1px solid #D3D3D3; margin-left: 35px; color: #b5d8f7; display: flex; justify-content: center;">
+                    <p class="text-delete-btn">DELETE.</p>
+                </div>
+
+            </div>
+            <footer
+                style="height: 95px; bottom: 0; width: 700px;  background-color: #b5d8f7; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; display: flex; align-items: center; justify-content: space-around;">
+                <p class="ballance">Total: <span style="font-weight: bold;">{{total}}</span>грн</p>
+                <div class="order-btn2"
+                    style="height: 40px; width: 120px; border-radius: 15px; border: 1px solid #D3D3D3; margin-left: 55px; color: #b5d8f7; display: flex; justify-content: center; background-color: white;">
+                    <p class="text-order-btn">ORDER NOW!</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</header>
